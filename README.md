@@ -35,7 +35,7 @@ Once the project finishes indexing, it should create a Run configuration automat
 
 ### Common Errors
 
-`Invalid option 'portable' for /debug`: Being new to this project, I Googled around to fix this one. I think I used [this](https://developercommunity.visualstudio.com/content/problem/84142/csc-error-cs1902-invalid-option-portable-for-debug.html) article. My hunch is that on a PC this doesn't matter because your compiler is "forgivingly" set by VisualStudio, but on a Mac Rider isn't as forgiving so it uses whatever is defined by the `xxproj` file. You can fix this by upgrading your project's compiler to the latest version (2.8.0). [There's a section for this below "Adding/Updating a Project Package"]
+`Invalid option 'portable' for /debug`: Being new to this project, I Googled around to fix this one. I think I used [this](https://developercommunity.visualstudio.com/content/problem/84142/csc-error-cs1902-invalid-option-portable-for-debug.html) article. My hunch is that on a PC this doesn't matter because your compiler is "forgivingly" set by VisualStudio, but on a Mac Rider isn't as forgiving so it uses whatever is defined by the `xxproj` file. You can fix this by upgrading your project's compiler to the latest version (2.8.0). [See "Adding/Updating a Project Package" below]
 
 `Reference Wasn't Resolved By System, 'Device'` **This is any error about System.Device.Location or Geolocation** While I don't think this is the right solution, it is a solution. In our API, we use geolocation and that package—for unknown reasons ATM—isn't available in the mono port of C#. I need to dig into this further, but you can get around this up installing `System.Device.Location.Portable` (1.0.0) as a new package. 
 
@@ -43,6 +43,8 @@ Once the project finishes indexing, it should create a Run configuration automat
 
 ### Adding/Updating a Project Package
 
-If you need to add a new dependency, select the root Solution (sln) file or Project (xxproj) file from the file navigator. From there, in the application menu bar, select Tools > NuGet > Manage Packages for x. You should see a window that lists all the packages visually. Using the search input, you can search for the package you'd like to add or update. If you're updating a package, select that package and look at the available versions. If adding a new dependency, search for it in the input and then add it to the project/solution.
+If you need to add a new dependency, select the root Solution (sln) file or Project (xxproj) file from the file navigator. From there, in the application menu bar, select Tools > NuGet > Manage Packages for x. You should see a window that lists all the packages visually. Using the search input, you can search for the package you'd like to add or update. 
+
+If you're updating a package, select that package and look at the available versions. If adding a new dependency, search for it in the input and then add it to the project/solution.
 
 **Disclaimer**: I'm still new to nuget & .Net.
