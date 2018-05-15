@@ -1,12 +1,12 @@
 
 # Running .NET Projects on OSX High Sierra (10.13.4)
 
-**Disclaimer**: I haven't vetted any real developer tooling, so while these steps will get most projects running, it may not have sufficient debugging support or tooling to be an effective developer environment.
+**Disclaimer**: I have done the minimum amount of debugging to make sure you can pause execution and that breakpoints allow eval. That works pretty well. More to come on this.
 
 ### Prerequisites
 
  - [Rider (2018.1)](https://www.jetbrains.com/rider/) - Fast, powerful, cross-platform .NET IDE
-  - [Mono (5.12.0)](http://www.mono-project.com/download/stable/) - Sponsored by [Microsoft](https://www.microsoft.com/), Mono is an open source implementation of Microsoft's .NET Framework based on the [ECMA](http://www.mono-project.com/docs/about-mono/languages/ecma/) standards for [C#](http://www.mono-project.com/docs/about-mono/languages/csharp/)and the [Common Language Runtime](http://www.mono-project.com/docs/advanced/runtime/).
+ - [Mono (5.12.0)](http://www.mono-project.com/download/stable/) - Sponsored by [Microsoft](https://www.microsoft.com/), Mono is an open source implementation of Microsoft's .NET Framework based on the [ECMA](http://www.mono-project.com/docs/about-mono/languages/ecma/) standards for [C#](http://www.mono-project.com/docs/about-mono/languages/csharp/)and the [Common Language Runtime](http://www.mono-project.com/docs/advanced/runtime/).
 
 **Note:** I had mono installed from installing Visual Studio 2017 Mac edition, so I included it here, but after installing Rider, it may already be on your system and configured.
 
